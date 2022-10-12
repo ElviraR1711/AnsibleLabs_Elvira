@@ -2,7 +2,7 @@
   connection: local
   hosts: localhost
   tasks:
-  
+
     - name: Print text
-     debug:
+      debug:
         msg: "I like pie"
