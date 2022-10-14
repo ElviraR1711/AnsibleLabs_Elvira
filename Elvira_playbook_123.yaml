@@ -1,5 +1,5 @@
 - name: Echo
-  hosts: all
+  hosts: 44.202.132.152
   tasks:
 
     - name: Print text
