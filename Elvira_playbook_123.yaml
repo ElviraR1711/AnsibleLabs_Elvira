@@ -1,1 +1,8 @@
+- name: Echo
+  connection: local
+  hosts: localhost
+  tasks:
 
+    - name: Print text
+      debug:
+        msg: "{{text}}"
