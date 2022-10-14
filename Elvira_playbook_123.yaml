@@ -1,10 +1,10 @@
 - name: Echo
-  hosts: "{{host}}"
+  hosts: "{{SELECT_HOST}}"
   tasks:
 
     - name: Print text
       debug:
-        msg: "{{text}}"
+        msg: "{{TEXT_TO_PRINT}}"
         - name: ansible create directory with mode setting example
           file:
             path: /tmp/devops_directory
