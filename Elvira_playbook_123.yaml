@@ -1,12 +1,20 @@
-- name: Echo
-  hosts: "{{SELECT_HOST}}"
-  tasks:
+---
 
-    - name: Print text
-      debug:
-        msg: "{{TEXT_TO_PRINT}}"
-        - name: ansible create directory with mode setting example
-          file:
-            path: /tmp/devops_directory
-            state: directory
-            mode: "u=rw,g=wx,o=rwx"
+- name: Echo
+  hosts: "{{host}}"
+  tasks:
+    - name: ansible create directory example
+      file:
+        path: /tmp/elvira/java_dns
+        state: directory
+    - name: ansible create gradle
+    file:
+        path://tmp/elvira/gradle
+        state: directory
+    - name: download sources
+    get_url: url=https://repo1.maven.org/maven2/dnsjava/dnsjava/3.5.0/dnsjava-3.5.0.jar dest=/tmp/test/java_dns
+      - name: download gradle
+      get_url: url=
+      file:
+        path: /tmp/test/java_dns
+        state: directory
